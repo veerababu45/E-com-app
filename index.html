@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stylique – Shop</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+</head>
+<body>
+  <nav class="header">
+    <h2>Stylique</h2>
+
+    <!-- Center: Search bar -->
+  <div class="search-box">
+    <input type="text" id="search-input" placeholder="Search products..." />
+  </div>
+    <ul class="non-bullet-list">
+      <li><a class="Log-out" href="logout.html">Logout</a></li>
+      <li>
+        <a href="#" style="position: relative;">
+          <span class="material-icons">favorite</span>
+          <span id="wish-count" class="cart-badge">0</span>
+        </a>
+      </li>
+      <li>
+        <a href="cart.html" style="position: relative;">
+          <span class="material-icons">shopping_cart</span>
+          <span id="cart-count" class="cart-badge">0</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="main-layout">
+    <aside class="sidebar">
+      <h3>Filters</h3>
+
+      <div class="filter-section">
+        <h4>Brand</h4>
+        <div id="brand-filters"></div>
+      </div>
+
+      <div class="filter-section">
+        <h4>Rating</h4>
+        <div>
+          <label><input type="checkbox" class="rating-filter" value="4"> 4★ & above</label><br>
+          <label><input type="checkbox" class="rating-filter" value="3"> 3★ & above</label><br>
+          <label><input type="checkbox" class="rating-filter" value="2"> 2★ & above</label><br>
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <h4>Price</h4>
+        <div>
+          <label><input type="radio" name="price" class="price-filter" value="0-500"> Under ₹500</label><br>
+          <label><input type="radio" name="price" class="price-filter" value="501-1000"> ₹501 - ₹1000</label><br>
+          <label><input type="radio" name="price" class="price-filter" value="1001-2000"> ₹1001 - ₹2000</label><br>
+        </div>
+      </div>
+
+      <button id="clear-filters">Clear Filters</button>
+    </aside>
+
+    <main class="product-container" id="product-container">
+      <!-- Products go here -->
+    </main>
+  </div>
+
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
